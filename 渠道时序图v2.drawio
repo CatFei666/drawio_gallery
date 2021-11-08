@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-08T13:32:51.684Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="NKyYylodxTeyP3eUHBsE" version="15.1.1" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-11-08T13:58:24.473Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="4gSa1KX1tvrKcIs_d4Xv" version="15.1.1" type="github" pages="5">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1234" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -253,7 +253,7 @@
         <mxCell id="_x4v-VnwTyk6EA4UEIuB-49" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="1">
           <mxGeometry x="375" y="1323" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_x4v-VnwTyk6EA4UEIuB-50" value="根据本次查询结果&lt;br&gt;1.处理中，更新有效信息，不更新状态；并且更新补偿单下次执行时间&lt;br&gt;2.终态，更新有效信息，更新状态；" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="1" target="_x4v-VnwTyk6EA4UEIuB-49">
+        <mxCell id="_x4v-VnwTyk6EA4UEIuB-50" value="根据本次查询结果&lt;br&gt;1.处理中，更新有效信息，不更新状态；并且更新补偿单下次执行时间（时间衰减）&lt;br&gt;2.终态，更新有效信息，更新状态；" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="1" target="_x4v-VnwTyk6EA4UEIuB-49">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="385" y="1280" as="sourcePoint" />
             <Array as="points">
@@ -834,7 +834,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="HVy-kELQ3NIcjvjKtujW" name="授权支付流程">
-    <mxGraphModel dx="1609" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2061" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-0" />
         <mxCell id="ZM-r9oJYv715uIu2z8fY-1" parent="ZM-r9oJYv715uIu2z8fY-0" />
@@ -857,25 +857,25 @@
           <mxGeometry x="45" y="100" width="10" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-5">
-          <mxGeometry x="45" y="240" width="10" height="100" as="geometry" />
+          <mxGeometry x="45" y="240" width="10" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-8" value="新增控制提交单（tb_funding_channel_commit_order），&lt;br&gt;请求类型为授权申请" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.033;entryY=0.156;entryDx=0;entryDy=0;entryPerimeter=0;align=left;verticalAlign=middle;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" source="ZM-r9oJYv715uIu2z8fY-9" target="ZM-r9oJYv715uIu2z8fY-11">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-8" value="1.新增控制提交单（tb_funding_channel_commit_order），&lt;br&gt;请求类型为授权申请&lt;br&gt;2.新增授权业务信息（tb_authorization）" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.033;entryY=0.156;entryDx=0;entryDy=0;entryPerimeter=0;align=left;verticalAlign=middle;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" source="ZM-r9oJYv715uIu2z8fY-9" target="ZM-r9oJYv715uIu2z8fY-11">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="75" y="410" />
+              <mxPoint x="75" y="390" />
               <mxPoint x="75" y="459" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-5">
-          <mxGeometry x="45" y="371" width="10" height="40" as="geometry" />
+          <mxGeometry x="45" y="340" width="10" height="71" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-10" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增控制请求单（tb_funding_channel_request_order）&lt;br&gt;，请求类型为授权申请&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" source="ZM-r9oJYv715uIu2z8fY-7" target="ZM-r9oJYv715uIu2z8fY-9">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-10" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;渠道筛选&amp;amp;路由&lt;/span&gt;&lt;br style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;1. 根据支付方式属性、用户采集要素进行授权渠道&lt;br&gt;筛选和路由（具体流程筛选流程请看&quot;渠道筛选&amp;amp;路由&quot;）&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" source="ZM-r9oJYv715uIu2z8fY-7" target="ZM-r9oJYv715uIu2z8fY-9">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="55" y="380" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="80" y="335" />
-              <mxPoint x="80" y="390" />
+              <mxPoint x="80" y="290" />
+              <mxPoint x="80" y="360" />
             </Array>
             <mxPoint x="110" y="405" as="targetPoint" />
           </mxGeometry>
@@ -886,7 +886,7 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-12" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-5">
           <mxGeometry x="45" y="630" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-13" value="&lt;div&gt;1. 根据授权结果更新控制提交单&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 根据授权结果更新控制请求单&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" target="ZM-r9oJYv715uIu2z8fY-12">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-13" value="&lt;div&gt;1. 根据授权结果更新控制提交单&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. 根据授权结果更新控制请求单&lt;/div&gt;&lt;div&gt;3. 更新授权业务信息&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-5" target="ZM-r9oJYv715uIu2z8fY-12">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="55" y="560" as="sourcePoint" />
             <Array as="points">
@@ -932,13 +932,13 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-23" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-20">
           <mxGeometry x="46" y="780" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-24" value="校验不通过，返回入款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-6" target="ZM-r9oJYv715uIu2z8fY-2">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-24" value="校验不通过，返回入款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.753;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-6" target="ZM-r9oJYv715uIu2z8fY-2">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="69.5" y="814.4999999999984" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-25" value="前置校验&#xa;1.必填参数校验（授权单号、商户ID、用户ID、金额、支付方式信息等）&#xa;2.授权单号对应入款请求单是否存在，若存在，则不通过&#xa;" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="383" y="160" width="220" height="70" as="geometry" />
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-25" value="前置校验&#xa;1.必填参数校验（授权单号、商户ID、用户ID、金额、支付方式信息等）&#xa;" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="383" y="160" width="220" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-26" value="根据授权渠道，发起授权申请" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry relative="1" as="geometry">
@@ -951,13 +951,10 @@
             <mxPoint x="387" y="566" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-28" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 11px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255) ; display: inline ; float: none&quot;&gt;渠道筛选&amp;amp;路由&lt;br&gt;1. 根据支付方式属性、用户采集要素进行授权渠道筛选和路由（具体流程筛选流程请看&quot;渠道筛选&amp;amp;路由&quot;）&lt;br&gt;2. 若无可用授权渠道，则此次授权失败，渠道侧不落单&lt;br&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="390" y="280" width="310" height="83" as="geometry" />
-        </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-29" value="若授权状态为失败，返回数据" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-9" target="ZM-r9oJYv715uIu2z8fY-2">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-29" value="若授权状态为失败，返回数据" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="440" as="sourcePoint" />
-            <mxPoint x="290" y="440" as="targetPoint" />
+            <mxPoint x="376" y="417.475" as="sourcePoint" />
+            <mxPoint x="-170.5" y="417.475" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-30" value="授权申请接口" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
@@ -986,7 +983,7 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-34" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="375" y="1007" width="10" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-35" value="1.保存授权信息（tb_authorization）&lt;br&gt;2.更新控制提交单&lt;br&gt;3.更新控制请求单" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-14" target="ZM-r9oJYv715uIu2z8fY-34">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-35" value="1.更新授权业务信息（tb_authorization）&lt;br&gt;2.更新控制提交单&lt;br&gt;3.更新控制请求单" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-14" target="ZM-r9oJYv715uIu2z8fY-34">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="380" y="966" as="sourcePoint" />
             <Array as="points">
@@ -1034,7 +1031,7 @@
           <mxGeometry x="375" y="1097" width="10" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-43" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="375" y="1217" width="10" height="120" as="geometry" />
+          <mxGeometry x="375" y="1260" width="10" height="77" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-44" value="1.新增支付提交单（tb_funding_channel_commit_order）&lt;br&gt;，请求类型为协议扣款" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.967;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;align=left;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-45" target="ZM-r9oJYv715uIu2z8fY-47">
           <mxGeometry relative="1" as="geometry">
@@ -1047,7 +1044,7 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-45" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="375" y="1368" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-46" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增支付请求单（tb_funding_channel_request_order）&lt;br&gt;，请求类型为协议扣款&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-43" target="ZM-r9oJYv715uIu2z8fY-45">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-46" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;渠道筛选&amp;amp;路由&lt;br&gt;1. 通过&lt;/span&gt;&lt;span style=&quot;font-size: 12px ; font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;“资金渠道编码”、“资金渠道配置编码”&lt;span style=&quot;font-size: 11px&quot;&gt;查询资金渠道能力，&lt;br&gt;若渠道不可用，则返回无可用渠道&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-43" target="ZM-r9oJYv715uIu2z8fY-45">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="55" y="1337" as="sourcePoint" />
             <Array as="points">
@@ -1063,7 +1060,7 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-48" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="375" y="1627" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-49" value="&lt;div&gt;&lt;/div&gt;1. 根据支付结果更新支付提交单&lt;div&gt;2. 根据支付结果更新支付请求单&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-48">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-49" value="&lt;div&gt;&lt;/div&gt;1. 根据支付结果（终态）新增支付结果单&lt;br&gt;2. 根据支付结果更新支付提交单&lt;div&gt;3. 根据支付结果更新支付请求单&lt;/div&gt;&lt;div&gt;4. 根据支付结果（提交单或请求单非终态）新增订单补偿单&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-48">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="385" y="1557" as="sourcePoint" />
             <Array as="points">
@@ -1089,14 +1086,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-53" value="补偿查询定时器" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="365" y="1997" width="30" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-54" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="375" y="2095" width="10" height="42" as="geometry" />
+          <mxGeometry x="375" y="2178" width="10" height="42" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-55" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="375" y="2373" width="10" height="80" as="geometry" />
+          <mxGeometry x="375" y="2456" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-56" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="740" y="1447" width="10" height="40" as="geometry" />
@@ -1105,7 +1099,7 @@
           <mxGeometry x="740" y="1697" width="10" height="240" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-58" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="740" y="2027" width="10" height="80" as="geometry" />
+          <mxGeometry x="740" y="2130" width="10" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-59" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="740" y="1503" width="10" height="54" as="geometry" />
@@ -1127,20 +1121,21 @@
           <mxGeometry x="999" y="1687" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-63" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="1009" y="2047" width="10" height="40" as="geometry" />
+          <mxGeometry x="1009" y="2152" width="10" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-64" value="发起支付请求，请求类型为协议扣款（支付下单接口）" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-42">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="78.5" y="1097" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-65" value="校验不通过，返回支付失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-42">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-65" value="校验不通过，返回支付失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="78.5" y="1192" as="targetPoint" />
+            <mxPoint x="78.5" y="1182" as="targetPoint" />
+            <mxPoint x="375" y="1182" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-66" value="前置校验&#xa;1.必填参数校验（交易单号、商户ID、金额、授权码等）&#xa;2.支付单号对应渠道支付请求单是否存在（tb_request_order），&#xa;若存在，则不通过&#xa;3.根据授权码查询机构授权表（tb_authorization），若记录不存在，&#xa;则不通过，若存在，则获取资金渠道编码和资金渠道配置编码" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="383" y="1117" width="220" height="70" as="geometry" />
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-66" value="前置校验&#xa;1.必填参数校验（交易单号、商户ID、金额、授权码等）&#xa;2.根据授权码查询机构授权表（tb_authorization），若记录不存在，&#xa;则不通过，若存在，则获取资金渠道编码和资金渠道配置编码" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="383" y="1105" width="220" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-67" value="根据支付渠道，发起支付申请（渠道统一调用接口）" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry relative="1" as="geometry">
@@ -1153,9 +1148,6 @@
             <mxPoint x="387" y="1523" as="targetPoint" />
             <mxPoint x="737" y="1544" as="sourcePoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-69" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 11px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255) ; display: inline ; float: none&quot;&gt;渠道筛选&amp;amp;路由&lt;br&gt;1. 通过&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255) ; display: inline ; float: none&quot;&gt;“资金渠道编码”、“资金渠道配置编码”&lt;span style=&quot;font-size: 11px&quot;&gt;查询资金渠道能力，若渠道不可用，则支付失败，渠道侧不落单&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="388" y="1240" width="340" height="87" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-70" value="若支付状态为失败，返回数据" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-45">
           <mxGeometry relative="1" as="geometry">
@@ -1195,7 +1187,7 @@
         <mxCell id="ZM-r9oJYv715uIu2z8fY-76" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="375" y="1887" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-77" value="1.更新提交单&lt;br&gt;2.更新请求单" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-51" target="ZM-r9oJYv715uIu2z8fY-76">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-77" value="1.新增支付结果单&lt;br&gt;2.更新支付提交单和支付请求单（事务）&lt;br&gt;3.根据支付结果（终态）更新订单补偿单状态为无需补偿" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-51" target="ZM-r9oJYv715uIu2z8fY-76">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="380" y="1847" as="sourcePoint" />
             <Array as="points">
@@ -1231,72 +1223,67 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-82" value="&lt;div style=&quot;text-align: left&quot;&gt;查询支付结果（渠道统一调用接口）&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-53" target="ZM-r9oJYv715uIu2z8fY-58">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="670" y="2027" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-83" value="返回支付结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;entryX=1;entryY=0.113;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-58" target="ZM-r9oJYv715uIu2z8fY-54">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="670" y="2103" as="targetPoint" />
+            <mxPoint x="670" y="2186" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-84" value="查询支付结果接口" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1;exitY=0.238;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-58" target="ZM-r9oJYv715uIu2z8fY-63">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-84" value="查询支付结果接口" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1;exitY=0.238;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-63">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="939" y="2027" as="sourcePoint" />
+            <mxPoint x="750" y="2151.04" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-85" value="返回支付结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1.1;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-63" target="ZM-r9oJYv715uIu2z8fY-58">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-85" value="返回支付结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1.1;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-63">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="939" y="2103" as="targetPoint" />
+            <mxPoint x="751" y="2184" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-86" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="375" y="2170" width="10" height="40" as="geometry" />
+          <mxGeometry x="375" y="2253" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-87" value="根据本次查询结果&lt;br&gt;1.处理中，更新有效信息，不更新状态&lt;br&gt;2.终态，更新有效信息，更新状态" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-86">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-87" value="根据本次查询结果&lt;br&gt;1.处理中，更新有效信息，不更新状态；并且更新补偿单下次执行时间&lt;br&gt;2.终态，更新有效信息，更新状态" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-86">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="385" y="2127" as="sourcePoint" />
+            <mxPoint x="385" y="2210" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="387" y="2127" />
-              <mxPoint x="410" y="2127" />
-              <mxPoint x="410" y="2155" />
+              <mxPoint x="387" y="2210" />
+              <mxPoint x="410" y="2210" />
+              <mxPoint x="410" y="2238" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-88" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="375" y="2240" width="10" height="50" as="geometry" />
+          <mxGeometry x="375" y="2323" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-89" value="1.更新提交单&lt;br&gt;2.更新请求单" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-86" target="ZM-r9oJYv715uIu2z8fY-88">
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-89" value="1.新增支付结果单（订单为终态时）&lt;br&gt;2.更新支付提交单和支付请求单（事务）&lt;br&gt;3.根据支付结果（终态）更新订单补偿单状态为无需补偿" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=1;exitY=0.875;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-86" target="ZM-r9oJYv715uIu2z8fY-88">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="380" y="2200" as="sourcePoint" />
+            <mxPoint x="380" y="2283" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="410" y="2205" />
-              <mxPoint x="410" y="2240" />
+              <mxPoint x="410" y="2288" />
+              <mxPoint x="410" y="2323" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-90" value="支付结果回调通知" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;exitX=-0.1;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="375" y="2277" as="sourcePoint" />
-            <mxPoint x="79.5" y="2277" as="targetPoint" />
+            <mxPoint x="375" y="2360" as="sourcePoint" />
+            <mxPoint x="79.5" y="2360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-91" value="补偿查询" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="64" y="2344" width="30" height="60" as="geometry" />
+          <mxGeometry x="64" y="2427" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-92" value="发起支付结果查询（支付查询接口）" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-91" target="ZM-r9oJYv715uIu2z8fY-55">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="305" y="2377" as="sourcePoint" />
+            <mxPoint x="305" y="2460" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-93" value="返回支付结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-55">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="78.5" y="2449" as="targetPoint" />
+            <mxPoint x="78.5" y="2532" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZM-r9oJYv715uIu2z8fY-94" value="1.必填参数校验（交易单号）&#xa;2.查询支付请求单（tb_funding_channel_request_order）&#xa;，获取支付结果" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
-          <mxGeometry x="386" y="2377" width="305" height="70" as="geometry" />
+        <mxCell id="ZM-r9oJYv715uIu2z8fY-94" value="1.必填参数校验（交易单号）&#xa;2.查询支付请求单（tb_funding_channel_request_order），获取支付结果" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="386" y="2460" width="305" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="ZM-r9oJYv715uIu2z8fY-97" target="ZM-r9oJYv715uIu2z8fY-78">
           <mxGeometry relative="1" as="geometry" />
@@ -1308,6 +1295,69 @@
         </mxCell>
         <mxCell id="ZM-r9oJYv715uIu2z8fY-97" value="上游服务" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
           <mxGeometry x="-260" y="1067" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hPng9POzJyjw1oAVkUus-0" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增控制请求单（tb_funding_channel_request_order）&lt;br&gt;，请求类型为授权申请&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;1.基于上游授权单号（唯一索引）进行&lt;/span&gt;&lt;b style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;幂等&lt;/b&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;校验&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="384" y="232.60000000000002" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="409" y="232" />
+              <mxPoint x="409" y="287" />
+            </Array>
+            <mxPoint x="384" y="287" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Sv9HGdBQH-pRF9uTRhGp-0" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增支付请求单（tb_funding_channel_request_order）&lt;br&gt;，请求类型为协议扣款&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;1.基于上游支付单号（唯一索引）进行&lt;/span&gt;&lt;b style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;幂等&lt;/b&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;校验&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" target="ZM-r9oJYv715uIu2z8fY-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="1184.72" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="385" y="1190" />
+              <mxPoint x="410" y="1190" />
+              <mxPoint x="410" y="1280" />
+            </Array>
+            <mxPoint x="385" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-0" value="补偿查询定时器" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="365" y="1962" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="375" y="2072" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-2" value="根据条件（补偿类型、时间、订单类型、状态等）查询&lt;br&gt;订单补偿单表（tb_funding_channel_order_compensate）" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="jGk-sT-2N2EgnbNlDsuv-0" target="jGk-sT-2N2EgnbNlDsuv-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="2012" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="450" y="1992" />
+              <mxPoint x="450" y="2072" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry x="375" y="2121" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-4" value="若提交单状态为终态，则根据提交单状态更新请求单状态" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="jGk-sT-2N2EgnbNlDsuv-1" target="jGk-sT-2N2EgnbNlDsuv-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="2061" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="420" y="2092" />
+              <mxPoint x="420" y="2121" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-5" value="&lt;div style=&quot;text-align: left&quot;&gt;若提交单为非状态，则查询支付结果（渠道统一调用接口）&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1" source="jGk-sT-2N2EgnbNlDsuv-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="2142" as="sourcePoint" />
+            <mxPoint x="740" y="2152" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="2152" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jGk-sT-2N2EgnbNlDsuv-6" value="请求单为终态，则支付结果回调通知" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;exitX=-0.1;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="ZM-r9oJYv715uIu2z8fY-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="2142" as="sourcePoint" />
+            <mxPoint x="79.5" y="2142" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
