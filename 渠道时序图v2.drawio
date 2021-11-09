@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-09T10:07:33.383Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="2bgEbqgCicswEH7i1z_I" version="15.7.0" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-11-09T12:00:29.961Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="o1-sHakyQpkOvQ8z-Vrs" version="15.7.0" type="github" pages="8">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1363,7 +1363,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="RbniiONg-GQUN5S2Q6Tz" name="出款流程">
-    <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-0" />
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-1" parent="QN37zbuTTKGP0GeV6Z_v-0" />
@@ -1391,7 +1391,7 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="55" y="380" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="80" y="340" />
+              <mxPoint x="80" y="350" />
               <mxPoint x="80" y="380" />
             </Array>
             <mxPoint x="110" y="405" as="targetPoint" />
@@ -1652,8 +1652,8 @@
         </mxCell>
         <mxCell id="gI-sUWHhxnGkdJMjHeSK-3" value="无可用渠道，返回出款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="375" y="370" as="sourcePoint" />
-            <mxPoint x="77.5" y="370" as="targetPoint" />
+            <mxPoint x="375" y="367" as="sourcePoint" />
+            <mxPoint x="77.5" y="367" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ABvXPjIGgRSCJbonyEXl-0" value="补偿查询定时器" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
@@ -1757,6 +1757,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="7MN-M3kKLLNrybOMQVQ8-0" value="限量限流：若渠道配置了限流，则进行限流校验，若不通过，则返回" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="QN37zbuTTKGP0GeV6Z_v-1">
+          <mxGeometry x="390" y="355" width="220" height="33" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -1769,7 +1772,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AGBAHACC8BYw6dAPjbH9" name="退票流程">
-    <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="A7x_HcPVgaTHOpxIoZFW-0" />
         <mxCell id="A7x_HcPVgaTHOpxIoZFW-1" parent="A7x_HcPVgaTHOpxIoZFW-0" />
@@ -1777,7 +1780,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Vrgm-QRCuw84obFwYlsA" name="退款流程">
-    <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-0" />
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-1" parent="CQ6z2DW0cMgjqfZSd6QF-0" />
