@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-09T03:59:47.620Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="clLpakTTjh9QdmCJalkn" version="15.7.0" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-11-09T05:43:09.907Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="3HpbADUGu-SNhA9fuVej" version="15.7.0" type="github" pages="7">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1855,13 +1855,13 @@
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-17" value="前置校验&#xa;1.必填参数校验（支付单号、退款金额）&#xa;2.支付单号对应渠道支付请求单是否存在，若不存在，则不通过&#xa;3.渠道支付请求单是否支付成功，若非成功，则不通过&#xa;4.退款金额是否等于支付单金额，若超出，则不通过" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="CQ6z2DW0cMgjqfZSd6QF-1" vertex="1">
           <mxGeometry x="383" y="160" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-18" value="根据退款渠道，发起退款申请" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" edge="1">
+        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-18" value="根据退款渠道，发起撤销/退款申请" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="387" y="516.8" as="sourcePoint" />
             <mxPoint x="740" y="516" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-19" value="返回退款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;entryX=0.9;entryY=0.861;entryDx=0;entryDy=0;entryPerimeter=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" source="CQ6z2DW0cMgjqfZSd6QF-12" target="CQ6z2DW0cMgjqfZSd6QF-8" edge="1">
+        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-19" value="返回撤销/退款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;entryX=0.9;entryY=0.861;entryDx=0;entryDy=0;entryPerimeter=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" source="CQ6z2DW0cMgjqfZSd6QF-12" target="CQ6z2DW0cMgjqfZSd6QF-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="387" y="566" as="targetPoint" />
           </mxGeometry>
@@ -1875,13 +1875,13 @@
             <mxPoint x="69.5" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-22" value="退款" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" edge="1">
+        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-22" value="撤销/退款" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" parent="CQ6z2DW0cMgjqfZSd6QF-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="750" y="540" as="sourcePoint" />
             <mxPoint x="1009" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-23" value="返回退款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" parent="CQ6z2DW0cMgjqfZSd6QF-1" source="CQ6z2DW0cMgjqfZSd6QF-14" target="CQ6z2DW0cMgjqfZSd6QF-12" edge="1">
+        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-23" value="返回撤销/退款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" parent="CQ6z2DW0cMgjqfZSd6QF-1" source="CQ6z2DW0cMgjqfZSd6QF-14" target="CQ6z2DW0cMgjqfZSd6QF-12" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="717" y="553" as="targetPoint" />
           </mxGeometry>
@@ -2049,9 +2049,6 @@
         </mxCell>
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-56" value="1.必填参数校验（交易单号）&#xa;2.查询退款请求单（tb_funding_channel_request_order），获取退款结果" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="CQ6z2DW0cMgjqfZSd6QF-1" vertex="1">
           <mxGeometry x="385" y="1491" width="305" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="CQ6z2DW0cMgjqfZSd6QF-57" value="1.渠道参数验证，若不通过，则返回失败" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="CQ6z2DW0cMgjqfZSd6QF-1" vertex="1">
-          <mxGeometry x="745" y="490" width="230" height="20" as="geometry" />
         </mxCell>
         <mxCell id="cDMh391iNfHfO2NX7W6T-0" value="补偿查询定时器" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="CQ6z2DW0cMgjqfZSd6QF-1" vertex="1">
           <mxGeometry x="365" y="1030" width="30" height="60" as="geometry" />
