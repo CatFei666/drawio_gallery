@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-09T13:11:00.286Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="fN21FjK0GLoDq_INNRxi" version="15.7.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-11-09T14:22:41.378Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="JLZlK7_XWPwpeP7XIo6W" version="15.7.0" type="github" pages="9">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1363,7 +1363,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="RbniiONg-GQUN5S2Q6Tz" name="出款流程">
-    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-0" />
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-1" parent="QN37zbuTTKGP0GeV6Z_v-0" />
@@ -1644,7 +1644,7 @@
             <mxPoint x="385" y="293.52" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gI-sUWHhxnGkdJMjHeSK-2" value="幂等校验不通过，返回出款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
+        <mxCell id="gI-sUWHhxnGkdJMjHeSK-2" value="幂等校验不通过，返回相同支付单号的出款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="375" y="300" as="sourcePoint" />
             <mxPoint x="77.5" y="300" as="targetPoint" />
@@ -1780,7 +1780,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Vrgm-QRCuw84obFwYlsA" name="退款流程">
-    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-0" />
         <mxCell id="CQ6z2DW0cMgjqfZSd6QF-1" parent="CQ6z2DW0cMgjqfZSd6QF-0" />
