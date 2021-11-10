@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-10T02:46:40.483Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="PCidEEcgMh4JhFbHNlOv" version="15.7.0" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2021-11-10T06:12:43.995Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="lKdL1hYE8RJyIBOTbbUC" version="15.7.0" type="github" pages="9">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1427,10 +1427,10 @@
           <mxGeometry x="330" y="40" width="100" height="2070" as="geometry" />
         </mxCell>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;" parent="QN37zbuTTKGP0GeV6Z_v-2" vertex="1">
-          <mxGeometry x="45" y="100" width="10" height="100" as="geometry" />
+          <mxGeometry x="45" y="100" width="10" height="70" as="geometry" />
         </mxCell>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" parent="QN37zbuTTKGP0GeV6Z_v-2" vertex="1">
-          <mxGeometry x="45" y="240" width="10" height="50" as="geometry" />
+          <mxGeometry x="45" y="190" width="10" height="50" as="geometry" />
         </mxCell>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-5" value="1.若渠道为虚拟渠道，则支付状态置为成功，不调用渠道网关&lt;br&gt;2.若渠道为异步渠道，则支付状态置为INIT，不调用渠道网关&lt;br&gt;3.若渠道为线下出款渠道，则支付状态置为INIT，不调用渠道网关" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=left;" parent="QN37zbuTTKGP0GeV6Z_v-2" source="QN37zbuTTKGP0GeV6Z_v-6" target="QN37zbuTTKGP0GeV6Z_v-8" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -1494,14 +1494,27 @@
         <mxCell id="gI-sUWHhxnGkdJMjHeSK-0" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="QN37zbuTTKGP0GeV6Z_v-2" vertex="1">
           <mxGeometry x="45" y="310" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gI-sUWHhxnGkdJMjHeSK-1" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;渠道&lt;b&gt;筛选&amp;amp;路由&lt;/b&gt;&lt;/span&gt;&lt;br style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;1. 根据支付方式属性、出款交易信息、用户采集要素进行&lt;br&gt;出款渠道筛选和路由（具体流程筛选流程请看&quot;渠道筛选&amp;amp;路由&quot;）&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" parent="QN37zbuTTKGP0GeV6Z_v-2" source="QN37zbuTTKGP0GeV6Z_v-4" target="gI-sUWHhxnGkdJMjHeSK-0" edge="1">
+        <mxCell id="gI-sUWHhxnGkdJMjHeSK-1" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;渠道&lt;b&gt;筛选&amp;amp;路由&lt;/b&gt;&lt;/span&gt;&lt;br style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;1. 根据支付方式属性、出款交易信息、用户采集要素进行&lt;br&gt;出款渠道筛选和路由（具体流程筛选流程请看&quot;渠道筛选&amp;amp;路由&quot;）&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" parent="QN37zbuTTKGP0GeV6Z_v-2" source="QN37zbuTTKGP0GeV6Z_v-4" target="W3sxAX0ZLIVd0BHtpd5x-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="45" y="290" as="sourcePoint" />
             <Array as="points">
+              <mxPoint x="80" y="230" />
               <mxPoint x="80" y="270" />
-              <mxPoint x="80" y="310" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="MxTw0rXUGHlBXq7xFNPh-0" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增出款请求单（tb_funding_channel_request_order）&lt;/span&gt;&lt;br style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;，请求类型为出款&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;1.基于上游支付单号（唯一索引）进行&lt;b&gt;幂等&lt;/b&gt;校验&lt;br&gt;&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" parent="QN37zbuTTKGP0GeV6Z_v-2" edge="1" target="QN37zbuTTKGP0GeV6Z_v-4" source="QN37zbuTTKGP0GeV6Z_v-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="170" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="160" />
+              <mxPoint x="80" y="210" />
+            </Array>
+            <mxPoint x="55" y="253.51999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="W3sxAX0ZLIVd0BHtpd5x-0" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="QN37zbuTTKGP0GeV6Z_v-2">
+          <mxGeometry x="45" y="260" width="10" height="40" as="geometry" />
         </mxCell>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-17" value="渠道网关" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;glass=0;comic=0;sketch=0;strokeWidth=1;fontFamily=Verdana;fillColor=#e3c800;fontColor=#ffffff;strokeColor=#BFA34D;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
           <mxGeometry x="694" y="40" width="102" height="2070" as="geometry" />
@@ -1532,9 +1545,10 @@
             <mxPoint x="69.5" y="140.0000000000025" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QN37zbuTTKGP0GeV6Z_v-26" value="校验不通过，返回出款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" parent="QN37zbuTTKGP0GeV6Z_v-1" source="QN37zbuTTKGP0GeV6Z_v-3" target="QN37zbuTTKGP0GeV6Z_v-39" edge="1">
+        <mxCell id="QN37zbuTTKGP0GeV6Z_v-26" value="校验不通过，返回出款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="69.5" y="814.4999999999984" as="targetPoint" />
+            <mxPoint x="78.5" y="197.5" as="targetPoint" />
+            <mxPoint x="375" y="197.5" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-27" value="前置校验&#xa;1.必填参数校验（交易单号、商户ID、金额、支付方式信息等）&#xa;" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
@@ -1689,27 +1703,16 @@
         <mxCell id="QN37zbuTTKGP0GeV6Z_v-56" value="1.必填参数校验（交易单号）&#xa;2.查询出款请求单（tb_funding_channel_request_order），获取出款结果" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
           <mxGeometry x="385" y="1524" width="305" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="MxTw0rXUGHlBXq7xFNPh-0" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;新增出款请求单（tb_funding_channel_request_order）&lt;/span&gt;&lt;br style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;，请求类型为出款&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;&lt;br&gt;1.基于上游支付单号（唯一索引）进行&lt;b&gt;幂等&lt;/b&gt;校验&lt;br&gt;&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;exitX=1;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.475;entryDx=0;entryDy=0;entryPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="385" y="210" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="385" y="213.52" />
-              <mxPoint x="410" y="213.52" />
-              <mxPoint x="410" y="293.52" />
-            </Array>
-            <mxPoint x="385" y="293.52" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="gI-sUWHhxnGkdJMjHeSK-2" value="幂等校验不通过，返回相同支付单号的出款结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="375" y="300" as="sourcePoint" />
-            <mxPoint x="77.5" y="300" as="targetPoint" />
+            <mxPoint x="375" y="262" as="sourcePoint" />
+            <mxPoint x="77.5" y="262" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="gI-sUWHhxnGkdJMjHeSK-3" value="无可用渠道，返回出款失败" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" parent="QN37zbuTTKGP0GeV6Z_v-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="375" y="367" as="sourcePoint" />
-            <mxPoint x="77.5" y="367" as="targetPoint" />
+            <mxPoint x="375" y="322" as="sourcePoint" />
+            <mxPoint x="77.5" y="322" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ABvXPjIGgRSCJbonyEXl-0" value="补偿查询定时器" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
@@ -1813,8 +1816,21 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="7MN-M3kKLLNrybOMQVQ8-0" value="限量限流：若渠道配置了限流，则进行限流校验，若不通过，则返回" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QN37zbuTTKGP0GeV6Z_v-1" vertex="1">
-          <mxGeometry x="390" y="355" width="220" height="33" as="geometry" />
+        <mxCell id="W3sxAX0ZLIVd0BHtpd5x-1" value="&lt;span style=&quot;font-size: 12px ; background-color: rgb(248 , 249 , 250)&quot;&gt;限量限流：若渠道配置了限流，则进行限流校验，&lt;br&gt;若不通过，则返回出款进行中&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="QN37zbuTTKGP0GeV6Z_v-1" target="gI-sUWHhxnGkdJMjHeSK-0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="330" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="410" y="330" />
+              <mxPoint x="410" y="360" />
+            </Array>
+            <mxPoint x="385" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zjCyIh0wY2-uv5-XWlWw-0" value="限流限流，返回出款进行中" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.033;exitY=0.72;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="QN37zbuTTKGP0GeV6Z_v-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="380" as="sourcePoint" />
+            <mxPoint x="78.17000000000007" y="380" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
