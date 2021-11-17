@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T11:25:32.696Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="nyWtzkP5-Zq2NsxsJXy6" version="15.7.4" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2021-11-17T11:28:24.994Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="s1hrN5LFSt2NYF1dHkns" version="15.7.4" type="github" pages="10">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="995" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2658,7 +2658,7 @@
           <mxGeometry x="45" y="70" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="zwPEGhkK7nUqNRL29HUW-29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="386TBdXxKFn2Eqkh4jn5-0">
-          <mxGeometry x="45" y="530" width="10" height="80" as="geometry" />
+          <mxGeometry x="45" y="570" width="10" height="80" as="geometry" />
         </mxCell>
         <mxCell id="1UGTvfmWeseam46fPtF1-0" value="BD" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;glass=0;comic=0;sketch=0;strokeWidth=1;fontFamily=Verdana;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="5oWslD1T9KV6ZnSm-dMv-1" vertex="1">
           <mxGeometry x="220" y="40" width="100" height="1580" as="geometry" />
@@ -2758,10 +2758,22 @@
         <mxCell id="zwPEGhkK7nUqNRL29HUW-26" value="运营" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;glass=0;comic=0;sketch=0;strokeWidth=1;fontFamily=Verdana;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="5oWslD1T9KV6ZnSm-dMv-1">
           <mxGeometry x="827" y="40" width="100" height="1580" as="geometry" />
         </mxCell>
+        <mxCell id="zwPEGhkK7nUqNRL29HUW-30" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="zwPEGhkK7nUqNRL29HUW-26">
+          <mxGeometry x="45" y="630" width="10" height="80" as="geometry" />
+        </mxCell>
         <mxCell id="zwPEGhkK7nUqNRL29HUW-24" value="业务验收" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;rounded=0;fontColor=#000000;" edge="1" source="zwPEGhkK7nUqNRL29HUW-22" parent="5oWslD1T9KV6ZnSm-dMv-1" target="zwPEGhkK7nUqNRL29HUW-29">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="385" y="626" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="zwPEGhkK7nUqNRL29HUW-31" value="验收完成，上线完成" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;rounded=0;dashed=1;fontColor=#000000;" edge="1" parent="5oWslD1T9KV6ZnSm-dMv-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="84" y="681" as="sourcePoint" />
+            <mxPoint x="872" y="681" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zwPEGhkK7nUqNRL29HUW-32" value="7. 调整渠道路由，接收交易" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5oWslD1T9KV6ZnSm-dMv-1">
+          <mxGeometry x="880" y="680" width="160" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
