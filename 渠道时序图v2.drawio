@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T03:21:21.361Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="2BlMGOUxvb2r5_XbVqpQ" version="15.7.4" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2021-11-17T03:26:44.078Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="m75PvQ2haVpxB3WYjhLJ" version="15.7.4" type="github" pages="10">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,7 +16,7 @@
         <mxCell id="_x4v-VnwTyk6EA4UEIuB-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;fillColor=#FFFFFF;align=left;" parent="_x4v-VnwTyk6EA4UEIuB-1" vertex="1">
           <mxGeometry x="45" y="280" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="_x4v-VnwTyk6EA4UEIuB-4" value="新增支付提交单（tb_funding_channel_commit_order）&lt;br&gt;，请求类型为入款" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=left;" parent="_x4v-VnwTyk6EA4UEIuB-1" source="_x4v-VnwTyk6EA4UEIuB-5" target="_x4v-VnwTyk6EA4UEIuB-7" edge="1">
+        <mxCell id="_x4v-VnwTyk6EA4UEIuB-4" value="新增控制/支付提交单（tb_funding_channel_commit_order）&lt;br&gt;，请求类型为入款" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=left;" parent="_x4v-VnwTyk6EA4UEIuB-1" source="_x4v-VnwTyk6EA4UEIuB-5" target="_x4v-VnwTyk6EA4UEIuB-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="80" y="400" />
@@ -179,7 +179,7 @@
         <mxCell id="_x4v-VnwTyk6EA4UEIuB-28" value="前置校验&#xa;1.必填参数校验（交易单号、商户ID、金额、支付方式信息等）&#xa;" style="text;align=left;fontStyle=0;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="1" vertex="1">
           <mxGeometry x="383" y="160" width="220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_x4v-VnwTyk6EA4UEIuB-29" value="根据支付渠道，发起支付申请（渠道统一调用接口）" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.067;entryY=0.185;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+        <mxCell id="_x4v-VnwTyk6EA4UEIuB-29" value="根据支付渠道，发起控制/支付申请（渠道统一调用接口）" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.067;entryY=0.185;exitX=1.2;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="387" y="536.8" as="sourcePoint" />
             <mxPoint x="739.3299999999999" y="536.5" as="targetPoint" />
@@ -197,7 +197,7 @@
             <mxPoint x="290" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_x4v-VnwTyk6EA4UEIuB-33" value="支付接口" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" parent="1" source="_x4v-VnwTyk6EA4UEIuB-20" target="_x4v-VnwTyk6EA4UEIuB-23" edge="1">
+        <mxCell id="_x4v-VnwTyk6EA4UEIuB-33" value="控制/支付接口" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;" parent="1" source="_x4v-VnwTyk6EA4UEIuB-20" target="_x4v-VnwTyk6EA4UEIuB-23" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="939" y="480" as="sourcePoint" />
           </mxGeometry>
@@ -612,7 +612,7 @@
         <mxCell id="EWQLTNDLz9GqepmQOaUB-52" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="EWQLTNDLz9GqepmQOaUB-1" vertex="1">
           <mxGeometry x="375" y="670" width="10" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="EWQLTNDLz9GqepmQOaUB-53" value="&lt;div&gt;&lt;/div&gt;1. 根据支付结果（终态）新增支付结果单&lt;br&gt;2. 根据支付结果（终态）新增订单号映射表（callback无内部&lt;br&gt;订单号的情况下）（若失败，则通过MQ异步保存）&lt;br&gt;3. 根据支付结果更新支付提交单&lt;div&gt;4. 根据支付结果更新支付请求单&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" parent="EWQLTNDLz9GqepmQOaUB-1" target="EWQLTNDLz9GqepmQOaUB-52" edge="1">
+        <mxCell id="EWQLTNDLz9GqepmQOaUB-53" value="&lt;div&gt;&lt;/div&gt;1. 根据支付结果（终态）新增支付结果单&lt;br&gt;2. 根据支付结果（终态）新增订单号映射表（callback无内部&lt;br&gt;订单号的情况下）（若失败，则通过MQ异步保存）&lt;br&gt;3. 根据支付结果更新支付提交单&lt;div&gt;4. 根据支付结果更新支付请求单（支付失败释放限额）&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" parent="EWQLTNDLz9GqepmQOaUB-1" target="EWQLTNDLz9GqepmQOaUB-52" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="385" y="600" as="sourcePoint" />
             <Array as="points">
