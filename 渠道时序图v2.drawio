@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T04:00:53.541Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="4Qr996N-l10f-cvaK6YU" version="15.7.4" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2021-11-17T05:42:21.806Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="PU1KAOSsVZPj22jtu9uQ" version="15.7.4" type="github" pages="10">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="1022" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -391,16 +391,16 @@
           <mxGeometry x="50" y="797" width="10" height="96" as="geometry" />
         </mxCell>
         <mxCell id="EWQLTNDLz9GqepmQOaUB-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;strokeWidth=1;" parent="EWQLTNDLz9GqepmQOaUB-3" vertex="1">
-          <mxGeometry x="50" y="923" width="10" height="207" as="geometry" />
+          <mxGeometry x="50" y="923" width="10" height="237" as="geometry" />
         </mxCell>
         <mxCell id="EWQLTNDLz9GqepmQOaUB-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;verticalAlign=middle;" parent="EWQLTNDLz9GqepmQOaUB-3" vertex="1">
           <mxGeometry x="50" y="1172" width="10" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="EWQLTNDLz9GqepmQOaUB-8" value="1.根据接口结果（终态）新增支付结果单&lt;br&gt;2.根据结果更新控制提交单&lt;br&gt;3.根据结果更新控制请求单&lt;br&gt;4.根据支付单号更新支付提交单和支付请求单（事务）&lt;br&gt;5.根据支付结果（提交单或请求单非终态）新增订单补偿单&lt;br&gt;（若失败，则通过MQ异步保存）" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" parent="EWQLTNDLz9GqepmQOaUB-3" edge="1" target="EWQLTNDLz9GqepmQOaUB-7">
+        <mxCell id="EWQLTNDLz9GqepmQOaUB-8" value="3.根据结果更新控制请求单&lt;br&gt;4.根据支付单号更新支付提交单和支付请求单（事务）&lt;br&gt;5.根据支付结果（提交单或请求单非终态）新增订单补偿单&lt;br&gt;（若失败，则通过MQ异步保存）" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" parent="EWQLTNDLz9GqepmQOaUB-3" edge="1" target="EWQLTNDLz9GqepmQOaUB-7" source="EWQLTNDLz9GqepmQOaUB-6">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="59" y="1113" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="89" y="1113" />
+              <mxPoint x="89" y="1150" />
               <mxPoint x="89" y="1220" />
             </Array>
             <mxPoint x="60" y="1188" as="targetPoint" />
@@ -901,13 +901,12 @@
             <mxPoint x="385" y="519" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="fp33tKWye-ciHCX-35HJ-0" value="1.根据接口结果（终态）新增支付结果单&lt;br&gt;2.根据结果更新控制提交单&lt;br&gt;3.根据结果更新控制请求单&lt;br&gt;4.根据支付单号更新支付提交单和支付请求单（事务）&lt;br&gt;5.根据支付结果（提交单或请求单非终态）新增订单补偿单&lt;br&gt;（若失败，则通过MQ异步保存）" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="EWQLTNDLz9GqepmQOaUB-1">
+        <mxCell id="fp33tKWye-ciHCX-35HJ-0" value="1.渠道交易码映射&lt;br&gt;2.渠道响应码映射（失败情况下）&lt;br&gt;3.根据支付结果（终态）新增支付结果单&lt;br&gt;4.根据支付结果更新支付提交单" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="EWQLTNDLz9GqepmQOaUB-1" target="EWQLTNDLz9GqepmQOaUB-6">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="390" y="1100" as="sourcePoint" />
             <Array as="points">
               <mxPoint x="420" y="1100" />
-              <mxPoint x="420" y="1175" />
-              <mxPoint x="391" y="1175" />
+              <mxPoint x="420" y="1150" />
             </Array>
             <mxPoint x="391" y="1175" as="targetPoint" />
           </mxGeometry>
