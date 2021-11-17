@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T12:47:32.160Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="tVYXpO8t7FW8cyxjk1M0" version="15.7.4" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2021-11-17T14:23:15.702Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="EuRa4MZO9XImR4C6mSl9" version="15.7.4" type="github" pages="10">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="995" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2405,6 +2405,51 @@
       <root>
         <mxCell id="mHEl8qIF2MuZ6R4zQQQt-0" />
         <mxCell id="mHEl8qIF2MuZ6R4zQQQt-1" parent="mHEl8qIF2MuZ6R4zQQQt-0" />
+        <mxCell id="7B_Xzn4CXb41AorpSqig-3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="mHEl8qIF2MuZ6R4zQQQt-1" source="r5bgm0LIuT5H_SKBPSwy-0" target="7B_Xzn4CXb41AorpSqig-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5bgm0LIuT5H_SKBPSwy-0" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="140" y="30" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="mHEl8qIF2MuZ6R4zQQQt-1" source="7B_Xzn4CXb41AorpSqig-0" target="7B_Xzn4CXb41AorpSqig-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-0" value="根据渠道编码和时间查询INIT状态的出款订单（渠道提交单，分页查询）" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="71.25" y="222" width="197.5" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="mHEl8qIF2MuZ6R4zQQQt-1" source="7B_Xzn4CXb41AorpSqig-1" target="7B_Xzn4CXb41AorpSqig-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-1" value="把所有线下出款订单插入到批次详情表（tb_batch_detail）" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="82.5" y="315" width="175" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="mHEl8qIF2MuZ6R4zQQQt-1" source="7B_Xzn4CXb41AorpSqig-2" target="7B_Xzn4CXb41AorpSqig-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-2" value="根据渠道和时间生成批次号，新增线下批次表（tb_batch_file）记录，状态为0（待上送）" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="71.25" y="127" width="197.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;verticalAlign=bottom;" edge="1" parent="mHEl8qIF2MuZ6R4zQQQt-1" source="7B_Xzn4CXb41AorpSqig-6" target="7B_Xzn4CXb41AorpSqig-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-6" value="更新渠道提交单为PENDING" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="82.5" y="410" width="175" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-8" value="结束" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="140" y="509" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-10" value="开始" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="520" y="30" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-11" value="查询线下批次表（tb_batch_file），获取所有状态为0（待上送）的记录" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="451.25" y="127" width="197.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-12" value="根据tb_batch_file表中的batch_id查询批次详情表（tb_batch_detail）,获取所有出款订单" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="451.25" y="220" width="197.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="7B_Xzn4CXb41AorpSqig-13" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;align=center;verticalAlign=middle;" vertex="1" parent="mHEl8qIF2MuZ6R4zQQQt-1">
+          <mxGeometry x="451.25" y="317" width="197.5" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
