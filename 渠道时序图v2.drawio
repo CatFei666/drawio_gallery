@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-17T11:28:24.994Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="s1hrN5LFSt2NYF1dHkns" version="15.7.4" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2021-11-17T11:57:31.706Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="j8Uv2tya0cmkSCZgwguv" version="15.7.4" type="github" pages="10">
   <diagram id="8Gsop-xYqd1bkP2zwNOv" name="普通支付流程">
     <mxGraphModel dx="995" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2646,7 +2646,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="XU-A4fKQflTgCU_myyqw" name="第 10 页">
+  <diagram id="XU-A4fKQflTgCU_myyqw" name="渠道对接流程">
     <mxGraphModel dx="995" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="5oWslD1T9KV6ZnSm-dMv-0" />
